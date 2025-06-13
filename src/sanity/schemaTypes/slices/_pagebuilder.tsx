@@ -20,7 +20,7 @@ export const pagebuilderSchema = {
       type: 'array',
       of: [
         { type: 'featureSection' },
-        { type: 'featureIcon4Up' },
+        { type: 'featureIcons4Up' },
         { type: 'featuredTestimonials' },
         { type: 'bentoGrid' }
       ]

@@ -25,7 +25,7 @@ export const featuredTestimonialsSchema = defineType({
       validation: Rule => Rule.required()
     }),
     defineField({
-      name: 'text',
+      name: 'Text',
       title: 'text',
       type: 'text',
       rows: 3
@@ -35,7 +35,7 @@ export const featuredTestimonialsSchema = defineType({
       name: 'testimonials',
       title: 'Testimonials',
       type: 'array',
-      of: [{ type: 'testimonialsCard' }],
+      of: [{ type: 'testimonialCard' }],
       validation: Rule => Rule.min(3).max(3).required()
     })
   ],

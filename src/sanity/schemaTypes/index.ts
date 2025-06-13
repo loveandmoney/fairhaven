@@ -10,6 +10,9 @@ import { seoSchema } from './objects/seo';
 import { headerSchema } from './objects/header';
 import { footerSchema } from './objects/footer';
 import { altImageSchema } from './objects/altImage';
+import { featureIconSchema } from './objects/featureIcon';
+import { iconSchema } from './objects/icon';
+import { testimonialCardSchema } from './objects/testimonialCard';
 
 // Singletons
 import { homePageSchema } from './singletons/homePage';
@@ -35,6 +38,9 @@ export const schemaTypes = [
   headerSchema,
   footerSchema,
   altImageSchema,
+  featureIconSchema,
+  iconSchema,
+  testimonialCardSchema,
 
   // Singletons
   homePageSchema,
