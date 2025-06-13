@@ -1,4 +1,8 @@
 import {
+  FEATURED_TESTIMONIALS_FRAGMENT,
+  IFeaturedTestimonials
+} from './featuredTestimonials';
+import {
   FEATURE_ICONS_4_UP_FRAGMENT,
   IFeatureIcons4Up
 } from './featureIcons4Up';
@@ -13,7 +17,11 @@ export const pagebuilderSchema = {
       name: 'slices',
       title: 'Slices',
       type: 'array',
-      of: [{ type: 'featureSection' }, { type: 'featureIcon4Up' }]
+      of: [
+        { type: 'featureSection' },
+        { type: 'featureIcon4Up' },
+        { type: 'featuredTestimonials' }
+      ]
     }
   ]
 };
@@ -29,9 +37,12 @@ export const PAGEBUILDER_FRAGMENT = `
     _type == "featureIcons4Up" => {
       ${FEATURE_ICONS_4_UP_FRAGMENT}
     },
+    _type == "featuredTestimonials" => {
+      ${FEATURED_TESTIMONIALS_FRAGMENT}
+    },
   }
 `;
 
 export interface IPagebuilder {
-  slices: (IFeatureSection | IFeatureIcons4Up)[];
+  slices: (IFeatureSection | IFeatureIcons4Up | IFeaturedTestimonials)[];
 }

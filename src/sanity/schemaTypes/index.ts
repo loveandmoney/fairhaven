@@ -18,6 +18,8 @@ import { settingsSchema } from './singletons/settings';
 // Slices
 import { pagebuilderSchema } from './slices/_pagebuilder';
 import { featureSectionSchema } from './slices/featureSection';
+import { featuredTestimonialsSchema } from './slices/featuredTestimonials';
+import { featureIcons4UpSchema } from './slices/featureIcons4Up';
 
 export const schemaTypes = [
   // Documents
@@ -39,5 +41,7 @@ export const schemaTypes = [
 
   // Slices
   pagebuilderSchema,
-  featureSectionSchema
+  featureSectionSchema,
+  featuredTestimonialsSchema,
+  featureIcons4UpSchema
 ];
