@@ -1,3 +1,4 @@
+import { BENTO_GRID_FRAGMENT, IBentoGrid } from './bentoGrid';
 import {
   FEATURED_TESTIMONIALS_FRAGMENT,
   IFeaturedTestimonials
@@ -20,7 +21,8 @@ export const pagebuilderSchema = {
       of: [
         { type: 'featureSection' },
         { type: 'featureIcon4Up' },
-        { type: 'featuredTestimonials' }
+        { type: 'featuredTestimonials' },
+        { type: 'bentoGrid' }
       ]
     }
   ]
@@ -40,9 +42,17 @@ export const PAGEBUILDER_FRAGMENT = `
     _type == "featuredTestimonials" => {
       ${FEATURED_TESTIMONIALS_FRAGMENT}
     },
+    _type == "bentoGrid" => {
+      ${BENTO_GRID_FRAGMENT}
+    },
   }
 `;
 
 export interface IPagebuilder {
-  slices: (IFeatureSection | IFeatureIcons4Up | IFeaturedTestimonials)[];
+  slices: (
+    | IFeatureSection
+    | IFeatureIcons4Up
+    | IFeaturedTestimonials
+    | IBentoGrid
+  )[];
 }

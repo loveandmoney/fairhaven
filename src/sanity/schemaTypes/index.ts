@@ -20,6 +20,7 @@ import { pagebuilderSchema } from './slices/_pagebuilder';
 import { featureSectionSchema } from './slices/featureSection';
 import { featuredTestimonialsSchema } from './slices/featuredTestimonials';
 import { featureIcons4UpSchema } from './slices/featureIcons4Up';
+import { bentoGridSchema } from './slices/bentoGrid';
 
 export const schemaTypes = [
   // Documents
@@ -43,5 +44,6 @@ export const schemaTypes = [
   pagebuilderSchema,
   featureSectionSchema,
   featuredTestimonialsSchema,
-  featureIcons4UpSchema
+  featureIcons4UpSchema,
+  bentoGridSchema
 ];
