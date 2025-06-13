@@ -15,6 +15,7 @@ import { structure } from '@/sanity/structure';
 import { schemaTypes } from '@/sanity/schemaTypes';
 
 export default defineConfig({
+  icon: () => 'LOGO',
   basePath: '/admin',
   projectId,
   title: 'Fairhaven CMS',

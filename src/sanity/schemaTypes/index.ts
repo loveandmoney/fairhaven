@@ -1,18 +1,28 @@
-import { homePageSchema } from './singletons/homePage';
+// Documents
 import { pageSchema } from './documents/page';
+
+// Objects
 import { blockContentSimpleSchema } from './objects/blockContentSimple';
 import { linkSchema } from './objects/link';
 import { linkWithLabelSchema } from './objects/linkWithLabel';
 import { pdfFileSchema } from './objects/pdfFile';
 import { seoSchema } from './objects/seo';
-import { settingsSchema } from './singletons/settings';
-import { pagebuilderSchema } from './slices/_pagebuilder';
 import { headerSchema } from './objects/header';
 import { footerSchema } from './objects/footer';
+import { altImageSchema } from './objects/altImage';
+
+// Singletons
+import { homePageSchema } from './singletons/homePage';
+import { settingsSchema } from './singletons/settings';
+
+// Slices
+import { pagebuilderSchema } from './slices/_pagebuilder';
+import { featureSectionSchema } from './slices/featureSection';
 
 export const schemaTypes = [
   // Documents
   pageSchema,
+
   // Objects
   blockContentSimpleSchema,
   linkSchema,
@@ -21,9 +31,13 @@ export const schemaTypes = [
   seoSchema,
   headerSchema,
   footerSchema,
+  altImageSchema,
+
   // Singletons
   homePageSchema,
   settingsSchema,
+
   // Slices
-  pagebuilderSchema
+  pagebuilderSchema,
+  featureSectionSchema
 ];

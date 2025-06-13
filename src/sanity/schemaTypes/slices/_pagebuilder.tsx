@@ -1,3 +1,5 @@
+import { FEATURE_SECTION_FRAGMENT, IFeatureSection } from './featureSection';
+
 export const pagebuilderSchema = {
   name: 'pagebuilder',
   title: 'Pagebuilder',
@@ -7,7 +9,7 @@ export const pagebuilderSchema = {
       name: 'slices',
       title: 'Slices',
       type: 'array',
-      of: []
+      of: [{ type: 'featureSection' }]
     }
   ]
 };
@@ -17,10 +19,12 @@ export const PAGEBUILDER_FRAGMENT = `
     _key,
     _type,
     ...,
-    
+     _type == "featureSection" => {
+      ${FEATURE_SECTION_FRAGMENT}
+    },
   }
 `;
 
 export interface IPagebuilder {
-  slices: [];
+  slices: IFeatureSection[];
 }
