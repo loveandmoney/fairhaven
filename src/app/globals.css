@@ -17,3 +17,55 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@utility t-d1 {
+  @apply text-[72px] leading-[100%] font-bold tracking-[-0.01em] md:text-[96px] md:leading-[100%] md:tracking-[-0.02em] lg:text-[128px] lg:leading-[100%] lg:tracking-[-0.01em];
+}
+
+@utility t-h1 {
+  @apply text-[60px] leading-[100%] font-bold tracking-[-0.01em] md:text-[72px] md:leading-[100%] md:tracking-[-0.01em] lg:text-[96px] lg:leading-[100%] lg:tracking-[-0.01em];
+}
+
+@utility t-h2 {
+  @apply text-[48px] leading-[100%] font-bold tracking-[-0.01em] md:text-[72px] md:leading-[100%] md:tracking-[-0.01em] lg:text-[60px] lg:leading-[100%] lg:tracking-[-0.01em];
+}
+
+@utility t-h3 {
+  @apply text-[36px] leading-[110%] font-bold tracking-[-0.01em] md:text-[48px] md:leading-[110%] md:tracking-[-0.01em] lg:text-[48px] lg:leading-[110%] lg:tracking-[-0.01em];
+}
+
+@utility t-h4 {
+  @apply text-[30px] leading-[115%] font-bold tracking-[-0.01em] md:text-[36px] md:leading-[115%] md:tracking-[-0.01em] lg:text-[36px] lg:leading-[115%] lg:tracking-[-0.01em];
+}
+
+@utility t-h5 {
+  @apply text-[20px] leading-[120%] font-bold tracking-[0em] md:text-[20px] md:leading-[120%] md:tracking-[0em] lg:text-[20px] lg:leading-[120%] lg:tracking-[0em];
+}
+
+@utility t-b1 {
+  @apply text-[20px] leading-[135%] font-medium tracking-[0em] md:text-[20px] md:leading-[135%] md:tracking-[0em] lg:text-[20px] lg:leading-[135%] lg:tracking-[0em];
+}
+
+@utility t-b2 {
+  @apply text-[16px] leading-[135%] font-medium tracking-[0em] md:text-[16px] md:leading-[135%] md:tracking-[0em] lg:text-[16px] lg:leading-[135%] lg:tracking-[0em];
+}
+
+@utility t-b3 {
+  @apply text-[14px] leading-[140%] font-medium tracking-[0.01em] md:text-[14px] md:leading-[140%] md:tracking-[0.01em] lg:text-[14px] lg:leading-[140%] lg:tracking-[0.01em];
+}
+
+@utility t-button {
+  @apply text-[16px] leading-[90%] font-bold tracking-[0em] md:text-[16px] md:leading-[90%] md:tracking-[0em] lg:text-[16px] lg:leading-[90%] lg:tracking-[0em];
+}
+
+@utility t-label {
+  @apply text-[16px] leading-[120%] font-bold tracking-[0.01em] md:text-[16px] md:leading-[120%] md:tracking-[0.01em] lg:text-[16px] lg:leading-[120%] lg:tracking-[0.01em];
+}
+
+@utility t-tag {
+  @apply text-[14px] leading-[120%] font-medium tracking-[0.01em] md:text-[14px] md:leading-[120%] md:tracking-[0.01em] lg:text-[14px] lg:leading-[120%] lg:tracking-[0.01em];
+}
+
+@utility t-caption {
+  @apply text-[14px] leading-[120%] font-bold tracking-[0.01em] md:text-[14px] md:leading-[120%] md:tracking-[0.01em] lg:text-[14px] lg:leading-[120%] lg:tracking-[0.01em];
+}
