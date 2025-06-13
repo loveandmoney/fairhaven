@@ -1,3 +1,7 @@
+import {
+  FEATURE_ICONS_4_UP_FRAGMENT,
+  IFeatureIcons4Up
+} from './featureIcons4Up';
 import { FEATURE_SECTION_FRAGMENT, IFeatureSection } from './featureSection';
 
 export const pagebuilderSchema = {
@@ -9,7 +13,7 @@ export const pagebuilderSchema = {
       name: 'slices',
       title: 'Slices',
       type: 'array',
-      of: [{ type: 'featureSection' }]
+      of: [{ type: 'featureSection' }, { type: 'featureIcon4Up' }]
     }
   ]
 };
@@ -22,9 +26,12 @@ export const PAGEBUILDER_FRAGMENT = `
      _type == "featureSection" => {
       ${FEATURE_SECTION_FRAGMENT}
     },
+    _type == "featureIcons4Up" => {
+      ${FEATURE_ICONS_4_UP_FRAGMENT}
+    },
   }
 `;
 
 export interface IPagebuilder {
-  slices: IFeatureSection[];
+  slices: (IFeatureSection | IFeatureIcons4Up)[];
 }
