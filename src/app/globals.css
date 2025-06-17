@@ -5,17 +5,36 @@
   --foreground: #171717;
 }
 
+@font-face {
+  font-family: "SeasonSans";
+  src: url("/fonts/SeasonSans-Bold.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "SeasonSans";
+  src: url("/fonts/SeasonSans-SemiBold.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "SeasonSans";
+  src: url("/fonts/SeasonSans-Medium.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 500;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "SeasonSans", Arial, Helvetica, sans-serif;
 }
 
 @utility t-d1 {
@@ -55,7 +74,7 @@ body {
 }
 
 @utility t-button {
-  @apply text-[16px] leading-[90%] font-bold tracking-[0em] md:text-[16px] md:leading-[90%] md:tracking-[0em] lg:text-[16px] lg:leading-[90%] lg:tracking-[0em];
+  @apply text-[16px] leading-[90%] font-semibold tracking-[0em] md:text-[16px] md:leading-[90%] md:tracking-[0em] lg:text-[16px] lg:leading-[90%] lg:tracking-[0em];
 }
 
 @utility t-label {
@@ -67,5 +86,5 @@ body {
 }
 
 @utility t-caption {
-  @apply text-[14px] leading-[120%] font-bold tracking-[0.01em] md:text-[14px] md:leading-[120%] md:tracking-[0.01em] lg:text-[14px] lg:leading-[120%] lg:tracking-[0.01em];
+  @apply text-[14px] leading-[120%] font-semibold tracking-[0.01em] md:text-[14px] md:leading-[120%] md:tracking-[0.01em] lg:text-[14px] lg:leading-[120%] lg:tracking-[0.01em];
 }
