@@ -1,10 +1,5 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @font-face {
   font-family: "SeasonSans";
   src: url("/fonts/SeasonSans-Bold.woff2") format("woff2");
@@ -27,13 +22,38 @@
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  /* Remove Tailwind defaults */
+  --color-*: initial;
+
+  --color-ecru: #ede8dd;
+  --color-oak: #9c602a;
+  --color-clay: #8b3b06;
+  --color-marmalade: #ff6512;
+  --color-turmeric: #d9c554;
+  --color-lavender: #d0cfff;
+  --color-mono-0: #ffffff;
+  --color-mono-10: #f0f0f0;
+  --color-mono-20: #dddee2;
+  --color-mono-30: #c7c7c7;
+  --color-mono-40: #a3a3a3;
+  --color-mono-50: #787878;
+  --color-mono-60: #595959;
+  --color-mono-70: #4a4a4a;
+  --color-mono-80: #383838;
+  --color-mono-90: #1e1e1e;
+  --color-mono-100: #000000;
+  --color-ui-red: #ff3737;
+  --color-ui-light-red: #ff4b4b;
+  --color-ui-pink: #ffb9b9;
+  --color-ui-green: #21f885;
+  --color-ui-light-green: #adffff;
+  --color-olive: #686727;
+  --color-mahogany: #39201b;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: theme(--color-clay);
+  color: theme(--color-mono-90);
   font-family: "SeasonSans", Arial, Helvetica, sans-serif;
 }
 
