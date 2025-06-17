@@ -31,48 +31,55 @@ body {
   /* Remove Tailwind defaults */
   --color-*: initial;
 
-  --color-ecru: #ede8dd;
-  --color-oak: #9c602a;
-  --color-clay: #8b3b06;
-  --color-marmalade: #ff6512;
-  --color-turmeric: #d9c554;
-  --color-lavender: #d0cfff;
-  --color-mono-0: #ffffff;
-  --color-mono-10: #f0f0f0;
-  --color-mono-20: #dddee2;
-  --color-mono-30: #c7c7c7;
-  --color-mono-40: #a3a3a3;
-  --color-mono-50: #787878;
-  --color-mono-60: #595959;
-  --color-mono-70: #4a4a4a;
-  --color-mono-80: #383838;
-  --color-mono-90: #1e1e1e;
-  --color-mono-100: #000000;
-  --color-ui-red: #ff3737;
-  --color-ui-light-red: #ff4b4b;
-  --color-ui-pink: #ffb9b9;
-  --color-ui-green: #21f885;
-  --color-ui-light-green: #adffff;
-  --color-olive: #686727;
-  --color-mahogany: #39201b;
+  --color-ecru: #ede8ddff;
+  --color-oak: #9c602aff;
+  --color-clay: #8b3b06ff;
+  --color-marmalade: #ff6512ff;
+  --color-turmeric: #d9c554ff;
+  --color-lavender: #d0cfffff;
+  --color-mono-0: #ffffffff;
+  --color-mono-10: #f0f0f0ff;
+  --color-mono-20: #dddee2ff;
+  --color-mono-30: #c7c7c7ff;
+  --color-mono-40: #a3a3a3ff;
+  --color-mono-50: #787878ff;
+  --color-mono-60: #595959ff;
+  --color-mono-70: #4a4a4aff;
+  --color-mono-80: #383838ff;
+  --color-mono-90: #1e1e1eff;
+  --color-mono-100: #000000ff;
+  --color-ui-red: #ff3737ff;
+  --color-ui-light-red: #ff4b4bff;
+  --color-ui-pink: #ffb9b9ff;
+  --color-ui-green: #21f885ff;
+  --color-ui-light-green: #adffffff;
+  --color-mahogany-10: #39201b1a;
+  --color-ecru-10: #ede8dd1a;
+  --color-olive: #686727ff;
+  --color-mahogany: #39201bff;
+  --color-ecru-90: #ede8dde5;
+  --color-mahogany-90: #39201be5;
+  --color-white-25: #ffffff40;
+  --color-mahogany-25: #39201b40;
 
-  --color-background-primary: #ede8dd;
-  --color-background-secondary: #ffffff;
-  --color-foreground-primary: #39201b;
-  --color-foreground-secondary: #000000;
-  --color-destructive-primary: #ff3737;
-  --color-destructive-tertiary: #ffb9b9;
-  --color-foreground-primary-inverse: #ede8dd;
-  --color-background-primary-inverse: #39201b;
-  --color-destructive-secondary: #ff4b4b;
-  --color-foreground-primary-opacity: #39201b;
-  --color-foreground-secondary-inverse: #ffffff;
-  --color-background-secondary-inverse: #1e1e1e;
-  --color-background-primary-opacity: #ede8dd;
-  --color-foreground-primary-inverse-opacity: #ede8dd;
-  --color-background-primary-inverse-opacity: #39201b;
+  --color-background-primary: #ede8ddff;
+  --color-background-secondary: #ffffffff;
+  --color-foreground-primary: #39201bff;
+  --color-foreground-secondary: #000000ff;
+  --color-destructive-primary: #ff3737ff;
+  --color-destructive-tertiary: #ffb9b9ff;
+  --color-foreground-primary-inverse: #ede8ddff;
+  --color-background-primary-inverse: #39201bff;
+  --color-destructive-secondary: #ff4b4bff;
+  --color-foreground-primary-opacity: #39201b1a;
+  --color-foreground-secondary-inverse: #ffffffff;
+  --color-background-secondary-inverse: #1e1e1eff;
+  --color-background-primary-opacity: #ede8dd1a;
+  --color-foreground-primary-inverse-opacity: #ede8dd1a;
+  --color-background-primary-inverse-opacity: #39201b1a;
 }
 
+/* Typography */
 @utility t-d1 {
   @apply text-[72px] leading-[100%] font-bold tracking-[-0.01em] md:text-[96px] md:leading-[100%] md:tracking-[-0.02em] lg:text-[128px] lg:leading-[100%] lg:tracking-[-0.01em];
 }
@@ -123,4 +130,11 @@ body {
 
 @utility t-caption {
   @apply text-[14px] leading-[120%] font-semibold tracking-[0.01em] md:text-[14px] md:leading-[120%] md:tracking-[0.01em] lg:text-[14px] lg:leading-[120%] lg:tracking-[0.01em];
+}
+
+/* A11y */
+@utility ring-focus-visible {
+  box-shadow:
+    0px 0px 0px 2px white,
+    0px 0px 0px 4px black;
 }
