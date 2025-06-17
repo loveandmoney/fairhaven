@@ -21,6 +21,12 @@
   font-weight: 500;
 }
 
+body {
+  background: theme(--color-mono-0);
+  color: theme(--color-mono-100);
+  font-family: "SeasonSans", Arial, Helvetica, sans-serif;
+}
+
 @theme inline {
   /* Remove Tailwind defaults */
   --color-*: initial;
@@ -49,12 +55,22 @@
   --color-ui-light-green: #adffff;
   --color-olive: #686727;
   --color-mahogany: #39201b;
-}
 
-body {
-  background: theme(--color-clay);
-  color: theme(--color-mono-90);
-  font-family: "SeasonSans", Arial, Helvetica, sans-serif;
+  --color-background-primary: #ede8dd;
+  --color-background-secondary: #ffffff;
+  --color-foreground-primary: #39201b;
+  --color-foreground-secondary: #000000;
+  --color-destructive-primary: #ff3737;
+  --color-destructive-tertiary: #ffb9b9;
+  --color-foreground-primary-inverse: #ede8dd;
+  --color-background-primary-inverse: #39201b;
+  --color-destructive-secondary: #ff4b4b;
+  --color-foreground-primary-opacity: #39201b;
+  --color-foreground-secondary-inverse: #ffffff;
+  --color-background-secondary-inverse: #1e1e1e;
+  --color-background-primary-opacity: #ede8dd;
+  --color-foreground-primary-inverse-opacity: #ede8dd;
+  --color-background-primary-inverse-opacity: #39201b;
 }
 
 @utility t-d1 {
