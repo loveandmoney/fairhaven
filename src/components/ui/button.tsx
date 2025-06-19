@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Slot } from '@radix-ui/react-slot';
 import { cva, type VariantProps } from 'class-variance-authority';
 import { cn } from '@/lib/utils';
-import { SVG, TSVG } from '../SVG';
+import { LucideIcon, Star } from 'lucide-react';
 
 export const buttonVariants = cva(
   "inline-flex items-center cursor-pointer justify-center gap-2 whitespace-nowrap t-button transition-all disabled:pointer-events-none data-[disabled]:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:ring-focus-visible",
@@ -53,8 +53,8 @@ export function Button({
   VariantProps<typeof buttonVariants> & {
     asChild?: boolean;
     loading?: boolean;
-    iconLeft?: TSVG;
-    iconRight?: TSVG;
+    iconLeft?: LucideIcon;
+    iconRight?: LucideIcon;
   }) {
   const Comp = asChild ? Slot : 'button';
 
@@ -87,9 +87,9 @@ export function Button({
       data-disabled={disabled ? '' : undefined}
       {...props}
     >
-      {iconLeft && <SVG svg={iconLeft} />}
+      {iconLeft && React.createElement(iconLeft, { className: 'shrink-0' })}
       {children}
-      {iconRight && <SVG svg={iconRight} />}
+      {iconRight && React.createElement(iconRight, { className: 'shrink-0' })}
     </Comp>
   );
 }
@@ -108,14 +108,14 @@ export const ButtonPreview = () => (
       ['default', 'icon', 'lg', 'sm'].map(size => (
         <div key={`${variant}-${size}`} className="flex justify-between">
           <Button
-            iconLeft="download"
+            iconLeft={Star}
             variant={variant as VariantProps<typeof buttonVariants>['variant']}
             size={size as VariantProps<typeof buttonVariants>['size']}
           >
             {size === 'icon' ? '' : `${variant} / ${size}`}
           </Button>
           <Button
-            iconLeft="download"
+            iconLeft={Star}
             variant={variant as VariantProps<typeof buttonVariants>['variant']}
             size={size as VariantProps<typeof buttonVariants>['size']}
             loading
@@ -123,7 +123,7 @@ export const ButtonPreview = () => (
             {size === 'icon' ? '' : `${variant} / ${size} / loading`}
           </Button>
           <Button
-            iconLeft="download"
+            iconLeft={Star}
             variant={variant as VariantProps<typeof buttonVariants>['variant']}
             size={size as VariantProps<typeof buttonVariants>['size']}
             disabled
