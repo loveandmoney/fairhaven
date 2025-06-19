@@ -1,7 +1,7 @@
 import groq from 'groq';
 import type { Rule } from 'sanity';
-import { IImage } from '@/sanity/lib/types';
 import { IMAGE_FRAGMENT } from '@/sanity/lib/fragments';
+import { IImage } from '@/sanity/lib/types';
 
 export const seoSchema = {
   name: 'seo',
