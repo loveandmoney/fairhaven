@@ -52,7 +52,7 @@ export const featureSectionSchema = defineType({
     prepare({ heading, text }) {
       return {
         title: heading,
-        subtitle: getSectionSubtitle('CTA', text),
+        subtitle: getSectionSubtitle('Feature Section', text),
         media: Star
       };
     }
