@@ -5,23 +5,23 @@ import { cn } from '@/lib/utils';
 import { SVG, TSVG } from '../SVG';
 
 export const buttonVariants = cva(
-  "inline-flex items-center cursor-pointer justify-center gap-2 whitespace-nowrap t-button transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:ring-focus-visible aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive",
+  "inline-flex items-center cursor-pointer justify-center gap-2 whitespace-nowrap t-button transition-all disabled:pointer-events-none data-[disabled]:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:ring-focus-visible",
   {
     variants: {
       variant: {
         default:
-          'bg-foreground-primary text-foreground-primary-inverse hover:opacity-90',
+          'bg-mahogany text-ecru hover:opacity-80 data-[loading]:opacity-80',
         secondary:
-          'bg-background-secondary text-foreground-primary hover:opacity-80',
+          'bg-mono-0 text-mahogany hover:opacity-80 data-[loading]:opacity-80',
         destructive:
-          'bg-destructive-primary text-foreground-primary-inverse hover:bg-destructive-secondary',
+          'bg-ui-red text-ecru hover:opacity-80 data-[loading]:opacity-80',
         outline:
-          'border border-mahogany-25 text-foreground-primary hover:bg-background-primary-inverse-opacity data-[loading]:bg-background-primary-inverse-opacity',
+          'border border-mahogany-25 text-mahogany hover:bg-mahogany-10 data-[loading]:bg-mahogany-10',
         'outline-inverse':
-          'border border-white-25 text-foreground-secondary-inverse hover:bg-background-primary-opacity data-[loading]:bg-background-primary-opacity',
+          'border border-white-25 text-mono-0 hover:bg-ecru-10 data-[loading]:bg-ecru-10',
         ghost:
-          'text-foreground-primary hover:bg-background-primary-inverse-opacity data-[loading]:bg-background-primary-inverse-opacity',
-        link: 'text-primary underline-offset-4 hover:underline'
+          'text-mahogany hover:bg-mahogany-10 data-[loading]:bg-mahogany-10',
+        link: 'text-mahogany underline-offset-4 hover:underline'
       },
       size: {
         default: 'h-[40px] px-4 rounded-full',
@@ -80,11 +80,11 @@ export function Button({
       data-slot="button"
       className={cn(
         buttonVariants({ variant: resolvedVariant, size: resolvedSize }),
-        loading && 'opacity-50',
         className
       )}
       disabled={disabled || loading}
       data-loading={loading ? '' : undefined}
+      data-disabled={disabled ? '' : undefined}
       {...props}
     >
       {iconLeft && <SVG svg={iconLeft} />}
