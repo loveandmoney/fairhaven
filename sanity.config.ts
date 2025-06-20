@@ -13,9 +13,10 @@ import { apiVersion, dataset, projectId } from '@/sanity/env';
 import { visionTool } from '@sanity/vision';
 import { structure } from '@/sanity/structure';
 import { schemaTypes } from '@/sanity/schemaTypes';
+import { Logo } from '@/sanity/components/Logo';
 
 export default defineConfig({
-  icon: () => 'LOGO',
+  icon: Logo,
   basePath: '/admin',
   projectId,
   title: 'Fairhaven CMS',

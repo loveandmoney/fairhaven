@@ -1,4 +1,4 @@
-import { Thumbnail } from '@/sanity/components/thumbnail';
+import { Thumbnail } from '@/sanity/components/Thumbnail';
 import { Image } from 'lucide-react';
 import { defineField, defineType } from 'sanity';
 
