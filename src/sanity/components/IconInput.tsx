@@ -1,13 +1,15 @@
-// sanity/components/icon-input.tsx
 import { Select, Stack } from '@sanity/ui';
 import { InputProps, set, unset } from 'sanity';
-import { lucideIcons, lucideKeys } from '../lib/lucide';
+import { curatedLucideIcons } from '../lib/lucide';
+import * as lucideIcons from 'lucide-react';
 
 export function IconInput({ value, onChange }: InputProps) {
-  const Icon = value && lucideIcons[value as keyof typeof lucideIcons];
+  const Icon =
+    value &&
+    (lucideIcons[value as keyof typeof lucideIcons] as lucideIcons.LucideIcon);
 
   return (
-    <div className="grid grid-cols-[1fr_64px] gap-4">
+    <div className="grid grid-cols-[1fr_64px] items-center gap-4">
       <Stack>
         <Select
           value={typeof value === 'string' ? value : ''}
@@ -16,7 +18,7 @@ export function IconInput({ value, onChange }: InputProps) {
             onChange(newVal ? set(newVal) : unset());
           }}
         >
-          {lucideKeys.map(key => (
+          {curatedLucideIcons.map(key => (
             <option key={key} value={key}>
               {key}
             </option>

@@ -1,7 +1,7 @@
 import { IconInput } from '@/sanity/components/IconInput';
-import { lucideKeys, TLucideIcon } from '@/sanity/lib/lucide';
+import { curatedLucideIcons } from '@/sanity/lib/lucide';
 import groq from 'groq';
-import { CirclePlus } from 'lucide-react';
+import { CirclePlus, LucideIcon } from 'lucide-react';
 import { defineField, defineType } from 'sanity';
 
 export const iconSchema = defineType({
@@ -15,7 +15,7 @@ export const iconSchema = defineType({
       title: 'Icon',
       type: 'string',
       options: {
-        list: lucideKeys,
+        list: curatedLucideIcons,
         layout: 'dropdown'
       },
       validation: Rule => Rule.required(),
@@ -27,7 +27,7 @@ export const iconSchema = defineType({
 });
 
 export interface IIcon {
-  icon: TLucideIcon;
+  icon: LucideIcon;
 }
 
 export const PDF_FILE_FRAGMENT = groq`

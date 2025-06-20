@@ -1,6 +1,7 @@
 import { Star } from 'lucide-react';
 import { defineField, defineType } from 'sanity';
 import { IIcon } from './icon';
+import { LucideIcon } from '@/sanity/components/LucideIcon';
 
 export const featureIconSchema = defineType({
   name: 'featureIcon',
@@ -26,7 +27,21 @@ export const featureIconSchema = defineType({
       type: 'icon',
       validation: Rule => Rule.required()
     })
-  ]
+  ],
+  preview: {
+    select: {
+      title: 'title',
+      description: 'description',
+      icon: 'icon.icon'
+    },
+    prepare({ title, description, icon }) {
+      return {
+        title: title,
+        subtitle: description,
+        media: <LucideIcon icon={icon} />
+      };
+    }
+  }
 });
 
 export interface IFeatureIcon {

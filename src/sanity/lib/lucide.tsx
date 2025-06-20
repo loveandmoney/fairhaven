@@ -1,14 +1,7 @@
-// lib/lucide.ts
-import * as lucide from 'lucide-react';
-import type { LucideProps } from 'lucide-react';
+import * as icons from 'lucide';
 
-const invalidKeys = ['createLucideIcon'];
+export type TLucideIconName = keyof typeof icons;
 
-export const lucideIcons = Object.fromEntries(
-  Object.entries(lucide).filter(
-    ([key, val]) => typeof val === 'function' && !invalidKeys.includes(key)
-  )
-) as Record<string, (props: LucideProps) => React.ReactElement>;
+export const lucideIconNames = Object.keys(icons) as TLucideIconName[];
 
-export const lucideKeys = Object.keys(lucideIcons).sort();
-export type TLucideIcon = keyof typeof lucideIcons;
+export const curatedLucideIcons: TLucideIconName[] = ['Star', 'Rocket'];

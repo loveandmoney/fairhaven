@@ -22,8 +22,8 @@ export const featureIcons4UpSchema = defineType({
       validation: Rule => Rule.required()
     }),
     defineField({
-      name: 'Text',
-      title: 'text',
+      name: 'text',
+      title: 'Text',
       type: 'text',
       rows: 3
     }),
