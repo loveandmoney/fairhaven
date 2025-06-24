@@ -13,12 +13,12 @@ import { apiVersion, dataset, projectId } from './src/sanity/env';
 import { visionTool } from '@sanity/vision';
 import { structure } from './src/sanity/structure';
 import { schemaTypes } from './src/sanity/schemaTypes';
-import { Home } from 'lucide-react';
+import { Logo } from './src/sanity/components/Logo';
 
 export default defineConfig({
   basePath: '/admin',
   projectId,
-  icon: Home,
+  icon: Logo,
   title: 'Fairhaven CMS',
   dataset,
   // Add and edit the content schema in the './sanity/schemaTypes' folder
