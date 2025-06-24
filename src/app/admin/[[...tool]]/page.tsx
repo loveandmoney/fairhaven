@@ -9,12 +9,11 @@
 
 import { NextStudio } from 'next-sanity/studio';
 import config from '../../../../sanity.config';
-import { Logo } from '../../../sanity/components/Logo';
 
 export const dynamic = 'force-static';
 
 export { metadata, viewport } from 'next-sanity/studio';
 
 export default function StudioPage() {
-  return <NextStudio config={{ ...config, icon: Logo }} />;
+  return <NextStudio config={{ ...config }} />;
 }
