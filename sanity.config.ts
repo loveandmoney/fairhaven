@@ -9,10 +9,10 @@ import { structureTool } from 'sanity/structure';
 import { media } from 'sanity-plugin-media';
 
 // Go to https://www.sanity.io/docs/api-versioning to learn how API versioning works
-import { apiVersion, dataset, projectId } from '@/sanity/env';
+import { apiVersion, dataset, projectId } from './src/sanity/env';
 import { visionTool } from '@sanity/vision';
-import { structure } from '@/sanity/structure';
-import { schemaTypes } from '@/sanity/schemaTypes';
+import { structure } from './src/sanity/structure';
+import { schemaTypes } from './src/sanity/schemaTypes';
 import { Home } from 'lucide-react';
 
 export default defineConfig({
