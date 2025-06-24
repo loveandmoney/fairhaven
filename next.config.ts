@@ -1,3 +1,4 @@
+import path from 'path';
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
@@ -7,6 +8,7 @@ const nextConfig: NextConfig = {
       use: ['@svgr/webpack']
     });
     config.resolve.fallback = { fs: false };
+    config.resolve.alias['@'] = path.resolve(__dirname, 'src');
     return config;
   },
   devIndicators: false,
