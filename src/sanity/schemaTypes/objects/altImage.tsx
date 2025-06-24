@@ -1,4 +1,4 @@
-import { Thumbnail } from '@/sanity/components/Thumbnail';
+// import { Thumbnail } from '@/sanity/components/Thumbnail';
 import { Image } from 'lucide-react';
 import { defineField, defineType } from 'sanity';
 
@@ -32,8 +32,8 @@ export const altImageSchema = defineType({
     },
     prepare({ imageUrl, altText }) {
       return {
-        title: altText || 'Image',
-        media: () => <Thumbnail url={imageUrl} />
+        title: altText || 'Image'
+        // media: () => <Thumbnail url={imageUrl} />
       };
     }
   }
