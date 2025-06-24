@@ -13,11 +13,11 @@ import { apiVersion, dataset, projectId } from '@/sanity/env';
 import { visionTool } from '@sanity/vision';
 import { structure } from '@/sanity/structure';
 import { schemaTypes } from '@/sanity/schemaTypes';
-// import { Logo } from '@/sanity/components/Logo';
-import { LaunchIcon } from '@sanity/icons';
+import { Logo } from './src/sanity/components/Logo';
+// import { LaunchIcon } from '@sanity/icons';
 
 export default defineConfig({
-  icon: LaunchIcon,
+  icon: Logo,
   basePath: '/admin',
   projectId,
   title: 'Fairhaven CMS',
