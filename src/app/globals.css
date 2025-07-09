@@ -101,7 +101,7 @@ body {
 }
 
 @utility t-button {
-  @apply text-[16px] leading-[90%] font-semibold tracking-[0em] md:text-[16px] md:leading-[90%] md:tracking-[0em] lg:text-[16px] lg:leading-[90%] lg:tracking-[0em];
+  @apply text-[16px] leading-[90%] font-bold tracking-[0em] md:text-[16px] md:leading-[90%] md:tracking-[0em] lg:text-[16px] lg:leading-[90%] lg:tracking-[0em];
 }
 
 @utility t-label {
