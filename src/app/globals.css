@@ -112,8 +112,12 @@ body {
   @apply text-[14px] leading-[120%] font-medium tracking-[0.01em] md:text-[14px] md:leading-[120%] md:tracking-[0.01em] lg:text-[14px] lg:leading-[120%] lg:tracking-[0.01em];
 }
 
-@utility t-caption {
+@utility t-caption1 {
   @apply text-[14px] leading-[120%] font-semibold tracking-[0.01em] md:text-[14px] md:leading-[120%] md:tracking-[0.01em] lg:text-[14px] lg:leading-[120%] lg:tracking-[0.01em];
+}
+
+@utility t-caption2 {
+  @apply text-[12px] leading-[120%] font-medium tracking-[0.01em];
 }
 
 /* A11y */
