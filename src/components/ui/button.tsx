@@ -24,10 +24,10 @@ export const buttonVariants = cva(
         link: 'text-mahogany underline-offset-4 hover:underline'
       },
       size: {
-        default: 'h-[40px] px-4 rounded-full',
-        sm: 'h-[32px] px-3 rounded-full',
-        lg: 'h-[44px] px-8 rounded-full',
-        icon: 'size-10 rounded-full',
+        default: 'h-[40px] px-4',
+        sm: 'h-[32px] px-3',
+        lg: 'h-[44px] px-8',
+        icon: 'size-10',
         link: ''
       }
     },
