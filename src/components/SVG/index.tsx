@@ -1,9 +1,19 @@
 import clsx from 'clsx';
 
 import logo from './svgs/logo.svg';
+import lockup from './svgs/lockup.svg';
+import star from './svgs/star.svg';
+import halfStar from './svgs/half-star.svg';
+import check from './svgs/check.svg';
+import send from './svgs/send.svg';
 
 const svgs = Object.freeze({
-  logo
+  logo,
+  lockup,
+  star,
+  halfStar,
+  check,
+  send
 });
 
 export type TSVG = keyof typeof svgs;

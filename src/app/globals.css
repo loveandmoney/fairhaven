@@ -1,21 +1,21 @@
 @import "tailwindcss";
 
 @font-face {
-  font-family: "SeasonSans";
+  font-family: "SeasonSans Bold";
   src: url("/fonts/SeasonSans-Bold.woff2") format("woff2");
   font-style: normal;
   font-weight: 700;
 }
 
 @font-face {
-  font-family: "SeasonSans";
+  font-family: "SeasonSans Semi";
   src: url("/fonts/SeasonSans-SemiBold.woff2") format("woff2");
   font-style: normal;
   font-weight: 600;
 }
 
 @font-face {
-  font-family: "SeasonSans";
+  font-family: "SeasonSans Medium";
   src: url("/fonts/SeasonSans-Medium.woff2") format("woff2");
   font-style: normal;
   font-weight: 500;
@@ -24,10 +24,14 @@
 body {
   background: theme(--color-mono-0);
   color: theme(--color-mono-100);
-  font-family: "SeasonSans", Arial, Helvetica, sans-serif;
+  font-family: "SeasonSans Medium", Arial, Helvetica, sans-serif;
 }
 
 @theme inline {
+  --font-bold: "SeasonSans Bold";
+  --font-semi: "SeasonSans Semi";
+  --font-medium: "SeasonSans Medium";
+
   /* Remove Tailwind defaults */
   --color-*: initial;
 
@@ -109,6 +113,10 @@ body {
 }
 
 @utility t-tag {
+  @apply text-[14px] leading-[120%] font-bold tracking-[0.01em] md:text-[14px] md:leading-[120%] md:tracking-[0.01em] lg:text-[14px] lg:leading-[120%] lg:tracking-[0.01em];
+}
+
+@utility t-tag2 {
   @apply text-[14px] leading-[120%] font-medium tracking-[0.01em] md:text-[14px] md:leading-[120%] md:tracking-[0.01em] lg:text-[14px] lg:leading-[120%] lg:tracking-[0.01em];
 }
 
