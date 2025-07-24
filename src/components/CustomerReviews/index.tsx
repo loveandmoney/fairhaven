@@ -8,7 +8,7 @@ interface ICustomerReviews {
 export const CustomerReviews = ({ rating }: ICustomerReviews) => {
   return (
     <div className="border-white-25 flex flex-col items-center rounded-sm border px-6 py-3">
-      <p className="t-tag">customer reviews</p>
+      <p className="t-tag">Customer Reviews</p>
       <p className="t-tag2">{rating} from 770 reviews</p>
       <div className="grid grid-cols-5 gap-0.5">
         {[1, 2, 3, 4, 5].map(i => {

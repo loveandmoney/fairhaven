@@ -5,7 +5,7 @@ import { cn } from '@/lib/utils';
 import { LucideIcon, Star } from 'lucide-react';
 
 export const buttonVariants = cva(
-  "inline-flex items-center cursor-pointer justify-center gap-2 whitespace-nowrap t-button transition-all disabled:pointer-events-none data-[disabled]:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:ring-focus-visible",
+  "inline-flex items-center cursor-pointer justify-center gap-2 whitespace-nowrap t-button text-left transition-all disabled:pointer-events-none data-[disabled]:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:ring-focus-visible",
   {
     variants: {
       variant: {
@@ -103,7 +103,8 @@ export const ButtonPreview = () => (
       'outline',
       'outline-inverse',
       'ghost',
-      'link'
+      'link',
+      'footerLink'
     ].map(variant =>
       ['default', 'icon', 'lg', 'sm'].map(size => (
         <div key={`${variant}-${size}`} className="flex justify-between">

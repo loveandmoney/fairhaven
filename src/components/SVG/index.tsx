@@ -6,6 +6,7 @@ import star from './svgs/star.svg';
 import halfStar from './svgs/half-star.svg';
 import check from './svgs/check.svg';
 import send from './svgs/send.svg';
+import loader from './svgs/loader.svg';
 
 const svgs = Object.freeze({
   logo,
@@ -13,7 +14,8 @@ const svgs = Object.freeze({
   star,
   halfStar,
   check,
-  send
+  send,
+  loader
 });
 
 export type TSVG = keyof typeof svgs;

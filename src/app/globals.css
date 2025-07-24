@@ -41,6 +41,8 @@ body {
   --color-marmalade: #ff6512ff;
   --color-turmeric: #d9c554ff;
   --color-lavender: #d0cfffff;
+
+  --color-white: #ffffffff;
   --color-mono-0: #ffffffff;
   --color-mono-10: #f0f0f0ff;
   --color-mono-20: #dddee2ff;
@@ -52,11 +54,13 @@ body {
   --color-mono-80: #383838ff;
   --color-mono-90: #1e1e1eff;
   --color-mono-100: #000000ff;
+
   --color-ui-red: #ff3737ff;
   --color-ui-light-red: #ff4b4bff;
   --color-ui-pink: #ffb9b9ff;
   --color-ui-green: #21f885ff;
   --color-ui-light-green: #adffffff;
+
   --color-mahogany-10: #39201b1a;
   --color-ecru-10: #ede8dd1a;
   --color-olive: #686727ff;
