@@ -28,7 +28,7 @@ export const newsletterSchema = z.object({
   email: z.string().email('Invalid email address')
 });
 
-export const Footer = ({ quickLinks, socialLinks }: IFooter) => {
+export const Footer = ({ quickLinks, socialLinks, contactInfo }: IFooter) => {
   const getSocialIcon = (url: string) => {
     if (url.includes('facebook')) return Facebook;
     if (url.includes('instagram')) return Instagram;
@@ -37,13 +37,13 @@ export const Footer = ({ quickLinks, socialLinks }: IFooter) => {
     return FileQuestion;
   };
   return (
-    <footer className="bg-mahogany text-ecru space-y-[48px] px-4 py-6 md:p-[48px] md:pb-6">
-      <div className="grid gap-10 md:grid-cols-2 md:gap-[90px]">
-        <div className="flex flex-col gap-10 md:flex-row md:gap-6">
+    <footer className="bg-mahogany text-ecru space-y-[48px] px-4 py-6 lg:p-[48px] lg:pb-6">
+      <div className="grid gap-10 lg:grid-cols-2 lg:gap-[90px]">
+        <div className="flex flex-col gap-10 lg:flex-row lg:gap-6">
           <div className="flex flex-col justify-between">
-            <SVG svg="lockupHorizontal" className="w-[152px] md:hidden" />
-            <SVG svg="lockup" className="hidden w-[90px] md:block" />
-            <CustomerReviews rating={3.5} className="hidden md:flex" />
+            <SVG svg="lockupHorizontal" className="w-[152px] lg:hidden" />
+            <SVG svg="lockup" className="hidden w-[90px] lg:block" />
+            <CustomerReviews rating={3.5} className="hidden lg:flex" />
           </div>
           <div className="space-y-2.5">
             <div className="space-y-4">
@@ -55,10 +55,10 @@ export const Footer = ({ quickLinks, socialLinks }: IFooter) => {
             <NewsletterForm />
           </div>
         </div>
-        <div className="grid gap-10 md:grid-cols-2 md:gap-4">
-          <div className="border-white-25 space-y-10 border-t pt-6 md:border-0 md:border-l md:p-0 md:pl-6">
+        <div className="grid gap-10 lg:grid-cols-2 lg:gap-4">
+          <div className="border-white-25 space-y-10 border-t pt-6 lg:border-0 lg:border-l lg:p-0 lg:pl-6">
             <h5 className="t-h5">Quick links</h5>
-            <ul className="space-y-6 md:space-y-5">
+            <ul className="space-y-6 lg:space-y-5">
               {quickLinks.map((link, index) => (
                 <li key={index}>
                   <Link
@@ -71,58 +71,16 @@ export const Footer = ({ quickLinks, socialLinks }: IFooter) => {
               ))}
             </ul>
           </div>
-          <div className="border-white-25 border-t pt-6 md:border-0 md:border-l md:p-0 md:pl-6">
+          <div className="border-white-25 border-t pt-6 lg:border-0 lg:border-l lg:p-0 lg:pl-6">
             <h5 className="t-h5 mb-[48px]">Call in whenever you like</h5>
             <div className="space-y-10">
-              <ul className="space-y-6 md:space-y-5">
-                <li>
-                  <Link
-                    className="t-b3 inline-flex items-center gap-2 transition-opacity hover:opacity-50"
-                    href="tel:1800 324 742"
-                  >
-                    <Phone size="16" />
-                    1800 Fairhaven (1800 324 742)
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    className="t-b3 inline-flex items-center gap-2 transition-opacity hover:opacity-50"
-                    href="tel:0400 660 960"
-                  >
-                    <Phone size="16" />
-                    Sales (0400 660 960)
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    className="t-b3 inline-flex items-center gap-2 transition-opacity hover:opacity-50"
-                    href="mailTo:info@fairhavenhomes.com.au"
-                  >
-                    <Mail size="16" />
-                    info@fairhavenhomes.com.au
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    className="t-b3 inline-flex items-center gap-2 transition-opacity hover:opacity-50"
-                    href="mailTo:info@fairhavenhomes.com.au"
-                  >
-                    <MapPin size="16" />
-                    Level 6, 1 Peter’s Avenue Mulgrave 3170,
-                    <br />
-                    Australia
-                  </Link>
-                </li>
-                <li className="t-b3 inline-flex items-center gap-2">
-                  <Clock size="16" />
-                  Monday-Thursday 8:30am - 4:45pm
-                  <br />
-                  Friday 8:30am - 4:00pm
-                </li>
-              </ul>
+              <ContactList
+                className="space-y-6 md:space-y-5"
+                contactInfo={contactInfo}
+              />
               <Button
                 variant="outline-inverse"
-                className="w-full text-white md:w-auto"
+                className="w-full text-white lg:w-auto"
                 iconRight={ArrowRight}
               >
                 Visit Support Hub
@@ -140,26 +98,26 @@ export const Footer = ({ quickLinks, socialLinks }: IFooter) => {
               ))}
             </ul>
           </div>
-          <CustomerReviews rating={3.5} className="w-full md:hidden" />
+          <CustomerReviews rating={3.5} className="w-full lg:hidden" />
         </div>
       </div>
-      <div className="space-y-10 md:space-y-6">
-        <div className="flex flex-col-reverse justify-between gap-10 md:flex-row md:gap-6">
-          <div className="flex flex-col gap-2 md:flex-row md:gap-8">
+      <div className="space-y-10 lg:space-y-6">
+        <div className="flex flex-col-reverse justify-between gap-10 lg:flex-row lg:gap-6">
+          <div className="flex flex-col gap-2 lg:flex-row lg:gap-8">
             <p className="t-tag2">Copyright 2025 © Fairhaven Homes</p>
             <p className="t-tag2">All rights reserved</p>
             <p className="t-tag2">CDBU 48497</p>
           </div>
-          <div className="flex flex-col gap-6 md:flex-row md:gap-8">
+          <div className="flex flex-col gap-6 lg:flex-row lg:gap-8">
             <Link
               href="privacy-policy"
-              className="t-button md:t-tag2 transition-opacity hover:opacity-50"
+              className="t-button lg:t-tag2 transition-opacity hover:opacity-50"
             >
               Privacy Policy
             </Link>
             <Link
               href="terms-and-conditions"
-              className="t-button md:t-tag2 transition-opacity hover:opacity-50"
+              className="t-button lg:t-tag2 transition-opacity hover:opacity-50"
             >
               Promotion Terms and Conditions
             </Link>
@@ -230,5 +188,63 @@ const NewsletterForm = () => {
         />
       </form>
     </FormProvider>
+  );
+};
+
+const ContactList = ({
+  contactInfo,
+  className
+}: {
+  contactInfo: IFooter['contactInfo'];
+  className?: string;
+}) => {
+  const ContactIcon = ({ type }: { type: string }) => {
+    switch (type) {
+      case 'phone':
+        return <Phone size="16" className="shrink-0" />;
+      case 'email':
+        return <Mail size="16" className="shrink-0" />;
+      case 'map':
+        return <MapPin size="16" className="shrink-0" />;
+      case 'clock':
+        return <Clock size="16" className="shrink-0" />;
+      default:
+        return null;
+    }
+  };
+
+  const getContactHref = (info: {
+    type: string;
+    value?: string;
+    label?: string;
+  }) => {
+    switch (info.type) {
+      case 'phone':
+        return `tel:${info.value || info.label}`;
+      case 'email':
+        return `mailto:${info.value || info.label}`;
+      case 'map':
+        return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(info.value || info.label || '')}`;
+      case 'clock':
+        return '/support';
+      default:
+        return '#';
+    }
+  };
+
+  return (
+    <ul className={className || undefined}>
+      {contactInfo.map((info, index) => (
+        <li key={index}>
+          <Link
+            className="t-b3 inline-flex items-center gap-2 transition-opacity hover:opacity-50"
+            href={getContactHref(info)}
+          >
+            <ContactIcon type={info.type} />
+            {info.label}
+          </Link>
+        </li>
+      ))}
+    </ul>
   );
 };
