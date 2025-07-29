@@ -19,7 +19,8 @@ import {
   Mail,
   MapPin,
   Phone,
-  Youtube
+  Youtube,
+  FileQuestion
 } from 'lucide-react';
 import { IFooter } from '@/sanity/schemaTypes/objects/footer';
 
@@ -27,7 +28,14 @@ export const newsletterSchema = z.object({
   email: z.string().email('Invalid email address')
 });
 
-export const Footer = ({ quickLinks }: IFooter) => {
+export const Footer = ({ quickLinks, socialLinks }: IFooter) => {
+  const getSocialIcon = (url: string) => {
+    if (url.includes('facebook')) return Facebook;
+    if (url.includes('instagram')) return Instagram;
+    if (url.includes('youtube')) return Youtube;
+    if (url.includes('linkedin')) return Linkedin;
+    return FileQuestion;
+  };
   return (
     <footer className="bg-mahogany text-ecru space-y-[48px] px-4 py-6 md:p-[48px] md:pb-6">
       <div className="grid gap-10 md:grid-cols-2 md:gap-[90px]">
@@ -121,21 +129,15 @@ export const Footer = ({ quickLinks }: IFooter) => {
               </Button>
             </div>
             <ul className="mt-[96px] inline-flex gap-2">
-              <li>
-                <Button variant="outline-inverse" iconLeft={Facebook} />
-              </li>
-              <li>
-                <Button variant="outline-inverse" iconLeft={Instagram} />
-              </li>
-              <li>
-                <Button variant="outline-inverse" iconLeft={Youtube} />
-              </li>
-              {/* <li>
-            <Button variant='outline-inverse'} iconLeft={Tiktok} />
-          </li> */}
-              <li>
-                <Button variant="outline-inverse" iconLeft={Linkedin} />
-              </li>
+              {socialLinks.map((link, index) => (
+                <li key={index}>
+                  <Button
+                    variant="outline-inverse"
+                    iconLeft={getSocialIcon(link.link.to)}
+                    // href={link.href.to}
+                  />
+                </li>
+              ))}
             </ul>
           </div>
           <CustomerReviews rating={3.5} className="w-full md:hidden" />

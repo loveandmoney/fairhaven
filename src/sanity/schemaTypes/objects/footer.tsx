@@ -24,9 +24,13 @@ export const footerSchema = {
 export const footerFragment = `
   quickLinks[] {
     ${LINK_WITH_LABEL_FRAGMENT}
+  },
+  socialLinks[] {
+    ${LINK_WITH_LABEL_FRAGMENT}
   }
 `;
 
 export interface IFooter {
   quickLinks: ILinkWithLabel[];
+  socialLinks: ILinkWithLabel[];
 }
