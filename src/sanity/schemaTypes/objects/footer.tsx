@@ -6,20 +6,27 @@ export const footerSchema = {
   type: 'object',
   fields: [
     {
-      title: 'Links',
-      name: 'links',
+      title: 'Quick Links',
+      name: 'quickLinks',
       type: 'array',
       of: [{ type: 'linkWithLabel' }]
+    },
+    {
+      title: 'Social Links',
+      name: 'socialLinks',
+      type: 'array',
+      of: [{ type: 'linkWithLabel' }],
+      description: 'Links to social media profiles'
     }
   ]
 };
 
 export const footerFragment = `
-  links[] {
+  quickLinks[] {
     ${LINK_WITH_LABEL_FRAGMENT}
   }
 `;
 
 export interface IFooter {
-  links: ILinkWithLabel[];
+  quickLinks: ILinkWithLabel[];
 }

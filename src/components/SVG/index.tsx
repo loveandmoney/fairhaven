@@ -4,18 +4,16 @@ import logo from './svgs/logo.svg';
 import lockup from './svgs/lockup.svg';
 import star from './svgs/star.svg';
 import halfStar from './svgs/half-star.svg';
-import check from './svgs/check.svg';
-import send from './svgs/send.svg';
 import loader from './svgs/loader.svg';
+import lockupHorizontal from './svgs/lockup-horizontal.svg';
 
 const svgs = Object.freeze({
   logo,
   lockup,
   star,
   halfStar,
-  check,
-  send,
-  loader
+  loader,
+  lockupHorizontal
 });
 
 export type TSVG = keyof typeof svgs;

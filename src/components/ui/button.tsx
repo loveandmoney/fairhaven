@@ -18,7 +18,7 @@ export const buttonVariants = cva(
         outline:
           'border border-mahogany-25 text-mahogany hover:bg-mahogany-10 data-[loading]:bg-mahogany-10',
         'outline-inverse':
-          'border border-white-25 text-mono-0 hover:bg-ecru-10 data-[loading]:bg-ecru-10',
+          'border border-white-25 text-ecru hover:bg-ecru-10 data-[loading]:bg-ecru-10',
         ghost:
           'text-mahogany hover:bg-mahogany-10 data-[loading]:bg-mahogany-10',
         link: 'text-mahogany underline-offset-4 hover:underline'
