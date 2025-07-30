@@ -107,7 +107,9 @@ export const Footer = ({ quickLinks, socialLinks, contactInfo }: IFooter) => {
       <div className="space-y-10 lg:space-y-6">
         <div className="flex flex-col-reverse justify-between gap-10 md:flex-row md:gap-6">
           <div className="flex flex-col gap-2 lg:flex-row lg:gap-8">
-            <p className="t-tag2">Copyright 2025 © Fairhaven Homes</p>
+            <p className="t-tag2">
+              Copyright {new Date().getFullYear()} © Fairhaven Homes
+            </p>
             <p className="t-tag2">All rights reserved</p>
             <p className="t-tag2">CDBU 48497</p>
           </div>
