@@ -11,12 +11,12 @@ export const CustomerReviews = ({ rating, className }: ICustomerReviews) => {
   return (
     <div
       className={clsx(
-        'border-white-25 flex items-center justify-between gap-2.5 rounded-sm border px-6 py-3 text-center md:flex-col',
+        'border-white-25 flex items-center justify-between gap-2.5 rounded-sm border px-6 py-3 text-center',
         className
       )}
     >
       <div className="flex flex-col items-center gap-1">
-        <p className="t-tag">Customer Reviews</p>
+        <p className="t-tag whitespace-nowrap">Customer Reviews</p>
         <div className="grid grid-cols-5 gap-0.5">
           {[1, 2, 3, 4, 5].map(i => {
             if (rating >= i) {

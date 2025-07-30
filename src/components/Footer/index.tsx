@@ -37,13 +37,13 @@ export const Footer = ({ quickLinks, socialLinks, contactInfo }: IFooter) => {
     return FileQuestion;
   };
   return (
-    <footer className="bg-mahogany text-ecru space-y-[48px] px-4 py-6 lg:p-[48px] lg:pb-6">
+    <footer className="bg-mahogany text-ecru space-y-[48px] px-4 py-6 md:p-[48px] md:pb-6">
       <div className="grid gap-10 lg:grid-cols-2 lg:gap-[90px]">
-        <div className="flex flex-col gap-10 lg:flex-row lg:gap-6">
+        <div className="flex flex-col gap-10 lg:flex-row lg:justify-between lg:gap-6">
           <div className="flex flex-col justify-between">
-            <SVG svg="lockupHorizontal" className="w-[152px] lg:hidden" />
-            <SVG svg="lockup" className="hidden w-[90px] lg:block" />
-            <CustomerReviews rating={3.5} className="hidden lg:flex" />
+            <SVG svg="lockupHorizontal" className="w-[152px] md:hidden" />
+            <SVG svg="lockup" className="hidden w-[90px] md:block" />
+            <CustomerReviews rating={3.5} className="hidden flex-col lg:flex" />
           </div>
           <div className="space-y-2.5">
             <div className="space-y-4">
@@ -55,10 +55,10 @@ export const Footer = ({ quickLinks, socialLinks, contactInfo }: IFooter) => {
             <NewsletterForm />
           </div>
         </div>
-        <div className="grid gap-10 lg:grid-cols-2 lg:gap-4">
-          <div className="border-white-25 space-y-10 border-t pt-6 lg:border-0 lg:border-l lg:p-0 lg:pl-6">
+        <div className="grid gap-10 md:grid-cols-2 md:gap-4">
+          <div className="border-white-25 space-y-10 border-t pt-6 md:border-0 md:border-l md:p-0 md:pl-6">
             <h5 className="t-h5">Quick links</h5>
-            <ul className="space-y-6 lg:space-y-5">
+            <ul className="space-y-6 md:space-y-5">
               {quickLinks.map((link, index) => (
                 <li key={index}>
                   <Link
@@ -71,7 +71,7 @@ export const Footer = ({ quickLinks, socialLinks, contactInfo }: IFooter) => {
               ))}
             </ul>
           </div>
-          <div className="border-white-25 border-t pt-6 lg:border-0 lg:border-l lg:p-0 lg:pl-6">
+          <div className="border-white-25 border-t pt-6 md:border-0 md:border-l md:p-0 md:pl-6">
             <h5 className="t-h5 mb-[48px]">Call in whenever you like</h5>
             <div className="space-y-10">
               <ContactList
@@ -80,7 +80,7 @@ export const Footer = ({ quickLinks, socialLinks, contactInfo }: IFooter) => {
               />
               <Button
                 variant="outline-inverse"
-                className="w-full text-white lg:w-auto"
+                className="w-full text-white md:w-auto"
                 iconRight={ArrowRight}
               >
                 Visit Support Hub
@@ -98,26 +98,29 @@ export const Footer = ({ quickLinks, socialLinks, contactInfo }: IFooter) => {
               ))}
             </ul>
           </div>
-          <CustomerReviews rating={3.5} className="w-full lg:hidden" />
+          <CustomerReviews
+            rating={3.5}
+            className="col-span-full w-full flex-col sm:flex-row md:mx-auto md:max-w-[650px] lg:hidden"
+          />
         </div>
       </div>
       <div className="space-y-10 lg:space-y-6">
-        <div className="flex flex-col-reverse justify-between gap-10 lg:flex-row lg:gap-6">
+        <div className="flex flex-col-reverse justify-between gap-10 md:flex-row md:gap-6">
           <div className="flex flex-col gap-2 lg:flex-row lg:gap-8">
             <p className="t-tag2">Copyright 2025 © Fairhaven Homes</p>
             <p className="t-tag2">All rights reserved</p>
             <p className="t-tag2">CDBU 48497</p>
           </div>
-          <div className="flex flex-col gap-6 lg:flex-row lg:gap-8">
+          <div className="flex flex-col gap-6 md:gap-2 lg:flex-row lg:gap-8">
             <Link
               href="privacy-policy"
-              className="t-button lg:t-tag2 transition-opacity hover:opacity-50"
+              className="t-button md:t-tag2 transition-opacity hover:opacity-50"
             >
               Privacy Policy
             </Link>
             <Link
               href="terms-and-conditions"
-              className="t-button lg:t-tag2 transition-opacity hover:opacity-50"
+              className="t-button md:t-tag2 transition-opacity hover:opacity-50"
             >
               Promotion Terms and Conditions
             </Link>
